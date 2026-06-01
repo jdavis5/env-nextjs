@@ -1,0 +1,17 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+deleted file mode 100644
+index 708095940ad022a7b05d588ae9ad7f1f366c8d92..0000000000000000000000000000000000000000
+diff --git a/package.json b/package.json
+index b556ac8346626727ff805e75c333f81c423e8046..7c8e8230baa880988f5318a100f6bb73ffe04956 100644
+--- a/package.json
++++ b/package.json
+@@ -7,7 +7,8 @@
+   "module": "./lib/index.mjs",
+   "exports": {
+     "require": "./lib/index.js",
+-    "import": "./lib/index.mjs"
++    "import": "./lib/index.mjs",
++    "types": "./lib/index.d.ts"
+   },
+   "files": [
+     "/lib"

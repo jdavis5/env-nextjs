@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/release-it@20/schema/release-it.json",
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits",
+        "bumpStrict": true
+      }
+    }
+  },
+  "hooks": {
+    "after:bump": ["pnpm build", "pnpm pack --out dist/${name}-${version}.tgz"]
+  },
+  "git": {
+    "commitMessage": "chore(release): 🚀 v${version} [skip ci]"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "v${version}",
+    "assets": ["dist/${name}-${version}.tgz"]
+  },
+  "npm": {
+    "publish": false
+  }
+}

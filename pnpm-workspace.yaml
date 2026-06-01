@@ -1,0 +1,8 @@
+patchedDependencies:
+  zod@3.0.0: patches/zod@3.0.0.patch
+updateConfig:
+  ignoreDependencies:
+    - zod3-min
+    - zod3-max
+    - zod4-min
+    - zod4-max

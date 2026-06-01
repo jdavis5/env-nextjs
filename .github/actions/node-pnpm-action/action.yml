@@ -1,0 +1,28 @@
+name: Setup
+description: A composite action which sets up Node and pnpm, and optionally installs dependencies
+
+inputs:
+  node-version:
+    description: 'The version of Node to use (default: 24)'
+    default: 24
+    type: number
+
+  pnpm-install:
+    description: 'Install project dependencies using `pnpm install` (default: false)'
+    default: false
+    type: boolean
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v6
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - uses: pnpm/action-setup@v6
+      with:
+        cache: true
+
+    - run: pnpm install
+      if: ${{ inputs.pnpm-install }}
+      shell: bash

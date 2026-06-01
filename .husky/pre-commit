@@ -1,0 +1,6 @@
+# Run prepare scripts in development mode during Husky workflows
+export PREPARE_MODE=development
+
+echo "🛠️ Checking staged files and applying safe fixes"
+lint-staged --config ./.config/lint-staged.config.ts
+
