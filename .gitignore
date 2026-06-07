@@ -1,10 +1,7 @@
-node_modules/
-dist/
+node_modules
+dist
 .env
 
 .DS_Store
-.zed/
+.zed
 
-# Disable semantic-release
-release/plugins/
-.releaserc.json
